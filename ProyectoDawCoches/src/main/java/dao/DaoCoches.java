@@ -25,7 +25,7 @@ public class DaoCoches {
 		Coches coche = null;
 		try {
 			con = c.getConn();
-			String consulta = "select * from coches order by precio";
+			String consulta = "select * from COCHES order by precio";
 			ps = con.prepareStatement(consulta);
 			rs = ps.executeQuery();
 
@@ -59,7 +59,7 @@ public class DaoCoches {
 
 		try {
 			con = c.getConn();
-			String consulta = "update coches set precio=? where idcoches=?";
+			String consulta = "update COCHES set precio=? where idcoches=?";
 			ps = con.prepareStatement(consulta);
 			ps.setDouble(1, precioNuevo);
 			ps.setInt(2, idcoche);
