@@ -77,12 +77,12 @@ body {
 </style>
 </head>
 <body>
-
 	<header>
 		<h1>Bienvenido a más que coches, tu tienda de 2º Mano de
 			confianza</h1>
 	</header>
 	<main class="main">
+
 		<div class="contenedor">
 
 			<form action="${pageContext.request.contextPath}/Control">
@@ -93,28 +93,21 @@ body {
 			<a href="modificar.jsp">modificar precio</a>
 
 			<div class="centrar">
-				<table id="tabla" class="table">
-					<caption>LISTADO DE COCHES 2º MANO EN VENTA</caption>
-					<tr>
-						<th>IDCOCHE</th>
-						<th>MODELO</th>
-						<th>PRECIO</th>
-						<th>COLOR</th>
-					</tr>
-					<c:forEach items="${listacoche}" var="coche">
-						<tr>
-							<td>${coche.idcoches}</td>
-							<td>${coche.modelo}</td>
-							<td>${coche.precio}</td>
-							<td>${coche.color}</td>
-						</tr>
-					</c:forEach>
-				</table>
+				<form action="${pageContext.request.contextPath}/Control">
+					<fieldset>
+						<legend>Modifique el precio del coche</legend>
+						<label for="idcoches">id del coche: </label> <input type="text"
+							id="idcoches" name="idcoches"> <label for="precio">Nuevo
+							Precio: </label> <input type="text" id="precio" name="precio"> <input
+							class="boton" type="submit" value="Modificar precio"> <input
+							type="hidden" value="modificar" name="operacion">
+					</fieldset>
+				</form>
 			</div>
 		</div>
 	</main>
 	<footer>
-		<p>Diseño creado por Expertos Developers S.L Azarquiel 2022 DAW</p>
+		<p>Diseño creado por Expertos Developers S.L Azarquiel 2022 DAW </p>
 	</footer>
 </body>
 </html>

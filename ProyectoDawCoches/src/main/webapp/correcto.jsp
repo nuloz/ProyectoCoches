@@ -74,15 +74,19 @@ body {
 	margin: 0;
 	min-height: 100vh;
 }
+
+.verde {
+	color: green;
+}
 </style>
 </head>
 <body>
-
 	<header>
 		<h1>Bienvenido a más que coches, tu tienda de 2º Mano de
 			confianza</h1>
 	</header>
 	<main class="main">
+
 		<div class="contenedor">
 
 			<form action="${pageContext.request.contextPath}/Control">
@@ -93,23 +97,10 @@ body {
 			<a href="modificar.jsp">modificar precio</a>
 
 			<div class="centrar">
-				<table id="tabla" class="table">
-					<caption>LISTADO DE COCHES 2º MANO EN VENTA</caption>
-					<tr>
-						<th>IDCOCHE</th>
-						<th>MODELO</th>
-						<th>PRECIO</th>
-						<th>COLOR</th>
-					</tr>
-					<c:forEach items="${listacoche}" var="coche">
-						<tr>
-							<td>${coche.idcoches}</td>
-							<td>${coche.modelo}</td>
-							<td>${coche.precio}</td>
-							<td>${coche.color}</td>
-						</tr>
-					</c:forEach>
-				</table>
+			<div>
+				<h3 class="verde">¡Modificación correcta!</h3>
+				<p>Puede volver a ver tabla o a modificar otro precio. </p>
+			</div>
 			</div>
 		</div>
 	</main>

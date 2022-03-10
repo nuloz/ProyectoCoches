@@ -52,8 +52,10 @@ public class Control extends HttpServlet {
 		case "modificar":
 			String idcoches = request.getParameter("idcoches");
 			String precio =  request.getParameter("precio");
+			DaoCoches dc = new DaoCoches();
+			dc.modificarPrecio(Integer.parseInt(idcoches), Double.parseDouble(precio));
 			
-			request.getRequestDispatcher("Index.jsp").forward(request, response);
+			request.getRequestDispatcher("correcto.jsp").forward(request, response);
 			break;
 		default:
 			break;
